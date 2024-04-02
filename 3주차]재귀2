@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+void PR(int);
+int main() {
+	int N;
+	scanf("%d", &N);
+	PR(N);
+}
+void PR(int N) {
+	if (N < 10) printf("%d", N);// base case
+	else { // recursion
+		PR(N/10);
+		printf("%d\n", N % 10);
+	}
+}
